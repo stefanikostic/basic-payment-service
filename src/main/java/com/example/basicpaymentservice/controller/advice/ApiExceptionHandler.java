@@ -49,7 +49,7 @@ public class ApiExceptionHandler {
         log.error(exception.getMessage());
 
         String errorMessage = "Validation failed due to invalid fields: " + errors.entrySet().stream()
-                .map(e -> e.getKey() + ": " + e.getValue()).collect(Collectors.joining(","));
+                .map(e -> e.getKey() + ": " + e.getValue()).collect(Collectors.joining(", "));
         return new ErrorResponse(errorMessage);
     }
 }

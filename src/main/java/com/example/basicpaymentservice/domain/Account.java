@@ -26,7 +26,7 @@ public class Account {
 
     public void withdraw(BigDecimal amount) {
         if (balance.compareTo(amount) < 0) {
-            throw new InsufficientFundsException("Insufficient funds in account " + id);
+            throw new InsufficientFundsException(id);
         }
         balance = balance.subtract(amount);
     }
