@@ -1,10 +1,11 @@
-package com.example.basicpaymentservice.service;
+package com.example.basicpaymentservice.service.concurrency;
 
 import com.example.basicpaymentservice.domain.Account;
 import com.example.basicpaymentservice.dto.TransferRequest;
 import com.example.basicpaymentservice.exception.InsufficientFundsException;
 import com.example.basicpaymentservice.repository.AccountRepository;
 import com.example.basicpaymentservice.repository.TransactionRepository;
+import com.example.basicpaymentservice.service.PaymentService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
